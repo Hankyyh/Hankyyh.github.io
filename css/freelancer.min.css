@@ -133,6 +133,29 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em
     }
+    .timeline > li .timeline-panel {
+        width: 100%;
+        float: right;
+        padding: 0 0px 0 0px;
+        margin-left: 70px;
+        /*    display: inline-block;*/
+        position: relative;
+        left: 80px;
+        text-align: left;
+    }
+    .timeline > li .timeline-image {
+        left: 0;
+        margin-left: 0;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        z-index: 100;
+        background-color: #fed136;
+        color: white;
+        border-radius: 100%;
+        border: 7px solid #f1f1f1;
+        text-align: center;
+    }
 }
 
 .navbar-custom {
@@ -200,6 +223,14 @@ header .intro-text .skills {
     .navbar-custom.affix .navbar-brand {
         font-size: 1.5em
     }
+    .timeline {
+        list-style: none;
+        padding: 0px;
+        position: relative;
+        margin-top: 50px;
+        display: inline-block;
+        width: 100%;
+    }
 }
 
 section {
@@ -227,12 +258,43 @@ section.success {
         width: 90%;
     }
     #education {
-        width: 90%;      
+        width: 90%;
     }
     .contain {
         width: 100%;
         padding: 20px;
-        
+    }
+    .timeline > li .timeline-panel {
+        width: 150%;
+        padding: 0 0px 0 10px;
+        /*    display: inline-block;*/
+/*        position: relative;*/
+        text-align: left;
+    }
+    .timeline > li .timeline-image {
+        left: 15px;
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        z-index: 100;
+        background-color: #fed136;
+        color: white;
+        border-radius: 100%;
+        border: 7px solid #f1f1f1;
+        text-align: center;
+    }
+    .timeline {
+        list-style: none;
+        padding: 0px;
+        position: relative;
+        margin-top: 20px;
+        display: inline-block;
+        width: 100%;
+        right: 40px;
+    }
+    .project_introduction {
+        text-align: center;
     }
 }
 
@@ -299,8 +361,9 @@ section.success {
         margin: 0 0 30px
     }
     #education {
-        display: inline-block;
-        width: 50%;
+        display: block;
+        float: left;
+        width:
     }
 }
 
@@ -608,13 +671,6 @@ header .intro-text p1 {
     width: 50%;
 }
 
-.timeline {
-    list-style: none;
-    padding: 0;
-    position: relative;
-    margin-top: 50px;
-}
-
 .timeline:before {
     top: 0;
     bottom: 0;
@@ -633,17 +689,6 @@ header .intro-text p1 {
     min-height: 50px;
 }
 
-.timeline > li .timeline-panel {
-    width: 110%;
-    float: right;
-    padding: 0 0px 0 0px;
-    margin-left: 70px;
-/*    display: inline-block;*/
-    position: relative;
-    left: 80px;
-    text-align: left;
-}
-
 .timeline > li .timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
@@ -656,20 +701,6 @@ header .intro-text p1 {
     border-right-width: 14px;
     left: -14px;
     right: auto;
-}
-
-.timeline > li .timeline-image {
-    left: 0;
-    margin-left: 0;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 100;
-    background-color: #fed136;
-    color: white;
-    border-radius: 100%;
-    border: 7px solid #f1f1f1;
-    text-align: center;
 }
 
 .timeline > li .timeline-image h4 {
