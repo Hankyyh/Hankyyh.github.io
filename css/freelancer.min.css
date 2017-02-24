@@ -59,7 +59,7 @@ hr.star-primary:after {
 }
 
 .navbar-custom,
-header .intro-text .name {
+#education .intro-text .name {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase
 }
@@ -88,7 +88,7 @@ hr.star-primary:after {
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-nav li a,
-header {
+#education {
     color: #fff
 }
 
@@ -96,41 +96,43 @@ header {
     margin: 0 auto
 }
 
-header {
+#education {
     text-align: center;
-    background: #18BC9C
+    background: #18BC9C;
+    width: 100%;
 }
 
-header .container {
+#education .container {
     padding-top: 100px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
+    width: 90%;
 }
 
-header img {
+#education img {
     display: block;
     margin: 0 auto 20px
 }
 
-header .intro-text .name {
+#education .intro-text .name {
     display: block;
     font-weight: 700;
     font-size: 2em
 }
 
-header .intro-text .skills {
+#education .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300
 }
 
 @media (min-width:768px) {
-    header .container {
-        padding-top: 200px;
+    #education .container {
+        padding-top: 100px;
         padding-bottom: 100px
     }
-    header .intro-text .name {
+    #education .intro-text .name {
         font-size: 4.75em
     }
-    header .intro-text .skills {
+    #education .intro-text .skills {
         font-size: 1.75em
     }
     .timeline > li .timeline-panel {
@@ -156,6 +158,21 @@ header .intro-text .skills {
         border: 7px solid #f1f1f1;
         text-align: center;
     }
+    .skillnotes ul li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 20em;
+    width: 30em;
+    padding: 1em;
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    -moz-transition: -moz-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+}
 }
 
 .navbar-custom {
@@ -234,7 +251,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0
+    padding: 100px 0;
 }
 
 section h2 {
@@ -255,20 +272,20 @@ section.success {
         padding-top: 75px
     }
     .container {
-        width: 90%;
+        width: 95%;
     }
     #education {
-        width: 90%;
+        width: 100%；
     }
     .contain {
         width: 100%;
         padding: 20px;
     }
     .timeline > li .timeline-panel {
-        width: 160%;
-        padding: 0 0px 0 10px;
+        width: 150%;
+        padding: 0 0px 0 20px;
         /*    display: inline-block;*/
-/*        position: relative;*/
+        /*        position: relative;*/
         text-align: left;
     }
     .timeline > li .timeline-image {
@@ -295,6 +312,21 @@ section.success {
     }
     .project_introduction {
         text-align: center;
+    }
+    .skillnotes ul li a {
+        text-decoration: none;
+        color: #000;
+        background: #ffc;
+        display: block;
+        height: 20em;
+        width: 20em;
+        padding: 1em;
+        -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+        -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+        -webkit-transition: -webkit-transform .15s linear;
     }
 }
 
@@ -356,15 +388,15 @@ section.success {
     z-index: 2
 }
 
+.portfolio-item img {
+        height: 250px;
+        width: 400px;
+    }
 @media (min-width:767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px
     }
-    #education {
-        display: block;
-        float: left;
-        width:
-    }
+    
 }
 
 .floating-label-form-group {
@@ -666,6 +698,12 @@ header .intro-text p1 {
     display: inline-block;
 }
 
+#education .intro-text p1 {
+    text-align: left;
+    font-size: 30px;
+    display: inline-block;
+}
+
 #introduction {
     display: inline-block;
     width: 50%;
@@ -751,3 +789,205 @@ header .intro-text p1 {
     font-size: 1.5em;
     padding: 50px;
 }
+
+.rotate {
+    background: url('http://martindrapeau.github.io/backbone-game-engine/docs/super-mario-sprite.png') 0 0 no-repeat;
+    width: 30px;
+    height: 60px;
+    margin-top: -15px;
+    position: relative;
+    top: 10px;
+    /*  margin: auto;*/
+    float: left;
+}
+
+.clockwise,
+.anticlockwise {
+    color: #000;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.clockwise {
+    float: right;
+}
+
+.clockwise:hover ~ .rotate {
+    animation: rotate-clockwise 6s steps(21) infinite;
+}
+
+.auto {
+    margin-top: 40px;
+}
+
+.rotate {
+    animation: rotate-clockwise 6s steps(21) infinite;
+}
+
+.auto:unchecked ~ .clockwise {
+    color: #fff;
+}
+
+.auto:unchecked ~ .anticlockwise {
+    color: #fff;
+}
+
+.anticlockwise:hover ~ .rotate {
+    animation: rotate-anticlockwise 6s steps(21) infinite;
+}
+
+.auto {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.auto-rotate {
+    color: #333;
+    font-weight: bold;
+    font-family: sans-serif;
+    clear: both;
+}
+
+@keyframes rotate-clockwise {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -672px 0;
+    }
+}
+
+@keyframes rotate-anticlockwise {
+    0% {
+        background-position: -672px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/*／sdfs*/
+
+#background {
+    background: url('../images/foreground.png') 5% 5%, url('../images/midground.png') 20% 20%, url('../images/background.png') 90% 110%;
+    top: 218px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    -webkit-transition: left 300s linear;
+}
+
+#experiment:target #background {
+    left: -5000px;
+}
+
+#experiment:hover #background {
+    left: -9999px;
+}
+
+
+/*this is a way */
+
+.skillnotes {
+    align-content: center;
+}
+
+.skillnotes h2,
+.skillnotes p {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.skillnotes ul,
+.skillnotes li {
+    list-style: none;
+}
+
+.skillnotes ul {
+    overflow: hidden;
+    padding: 3em;
+}
+
+
+
+.skillnotes ul li {
+    margin: 1em;
+    float: left;
+}
+
+.skillnotes ul li h2 {
+    font-size: 140%;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.skillnotes ul li p {
+    font-family: "Reenie Beanie", arial, sans-serif;
+    font-size: 180%;
+}
+
+.skillnotes ul li a {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+}
+
+.skillnotes ul li:nth-child(even) a {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+.skillnotes ul li:nth-child(3n) a {
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+
+.skillnotes ul li:nth-child(5n) a {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+.skillnotes ul li a:hover,
+.skillnotes ul li a:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+
+.skillnotes ol {
+    text-align: center;
+}
+
+.skillnotes ol li {
+    display: inline;
+    padding-right: 1em;
+}
+
+.skillnotes ol li a {
+    color: #fff;
+}
+
+
+
+
+

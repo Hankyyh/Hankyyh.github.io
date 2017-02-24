@@ -29,6 +29,23 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animated Background Headers | Demo 1</title>
+    <meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
+    <meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!--    <link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+<!--    <link rel="stylesheet" type="text/css" href="css/ball.css" />-->
+
+    <!--    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>-->
+
 </head>
 
 <body id="page-top" class="index">
@@ -42,13 +59,30 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">Yunhan Yu</a>
+                <!--                <input type="checkbox" class="auto" id="auto" checked>-->
+                <!--<label class="auto-rotate" for="auto">Auto &#x21bb;</label><br>-->
+                <!--
+<span class="anticlockwise">&#x2190;</span>
+<span class="clockwise">&#x2192;</span>
+-->
+                <div class="rotate"></div>
             </div>
+
+
+
+
+
+
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#education">Education</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#portfolio">Portfolio</a>
@@ -67,8 +101,21 @@
     </nav>
 
     <!-- Header -->
+
+
+
     <header>
+        <div class="demo-1">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <h1 class="main-title"><a href="https://www.linkedin.com/in/yunhanyu" target="_blank">Yunhan <span class="thin">Yu</span></a></h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="education">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12" id="introduction">
                     <img class="img-responsive" src="img/profile.png" alt="">
@@ -93,7 +140,7 @@
                         </p1>
                         <p1>4.Passionate about work, enjoy collaborating and communicating with others, willing to help others and eager to devote my skills to my employer</p1>
                     </div>
-                    <div  id="education" class="col-lg-6">
+                    <div id="edu" class="col-lg-6">
                         <ul class="timeline">
                             <li class="timeline-list">
                                 <div class="timeline-image"><img class="img-circle img-responsive" src="img/1.png" alt="university"></div>
@@ -112,7 +159,7 @@
                             </li>
                             <li class="timeline-list">
                                 <div class="timeline-image"><img class="img-circle img-responsive" src="img/2.png" alt="university"></div>
-                                <div class="timeline-panel">
+                                <div class="timeline-panel col-xs-10">
                                     <div class="timeline-heading">
                                         <h4>2012-2016</h4>
                                     </div>
@@ -133,7 +180,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
@@ -166,7 +213,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                        <img src="img/music.png" class="img-responsive" alt="">
                     </a>
                     <p class="project_introduction">Android Concise Music Player</p>
                 </div>
@@ -178,7 +225,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                        <img src="img/coninfo.png" class="img-responsive" alt="">
                     </a>
                     <p class="project_introduction">Responsive Congress Website </p>
                 </div>
@@ -189,11 +236,11 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                        <img src="img/recommendation.png" class="img-responsive" alt="">
                     </a>
                     <p class="project_introduction">Collaborative filtering Recommendation System Research</p>
                 </div>
-                <!--
+                
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -201,8 +248,9 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                        <img src="img/crawler.png" class="img-responsive" alt="">
                     </a>
+                    <p class="project_introduction">Web Crawler Application</p>
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
@@ -211,10 +259,11 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                        <img src="img/magazine.png" class="img-responsive" alt="">
                     </a>
+                    <p class="project_introduction">Magazine Information Website</p>
                 </div>
--->
+
             </div>
         </div>
     </section>
@@ -229,6 +278,34 @@
                 </div>
             </div>
             <div class="row">
+               <div class="skillnotes">
+                <ul>
+                    <li class="col-lg-6">
+                        <a href="#about">
+                            <h2>Language</h2>
+                            <p>Java, C++, HTML, JavaScript, PHP, SQL, Python</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <h2>Tools</h2>
+                            <p>Visual Studio, Eclipse, Android Studio, Brackets, Emacs, Xcode, NetBeans</p>
+                        </a>
+                    </li>
+                    <li class="col-lg-6">
+                        <a href="#about">
+                            <h2>Techniques</h2>
+                            <p>AngularJS, Node.js, MongoDB, Scrapy, CodeIgniter, Apache, AWS</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <h2>Operating System</h2>
+                            <p>UNIX, Linux, Mac OSX, Windows</p>
+                        </a>
+                    </li>
+                </ul>
+                <!--
                 <div class="col-lg-3 col-lg-offset-2">
                     <p>Language: Java, C++, HTML, JavaScript, PHP, SQL</p>
                 </div>
@@ -239,14 +316,18 @@
 
                     <p>Operating System: UNIX, Linux, Mac OSX, Windows</p>
                 </div>
+-->
                 <!--
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Theme
                     </a>
                 </div>
+                
 -->
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -259,10 +340,15 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            
+	           			
+			
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+<!--
+                     To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. 
+                     The form should work on most web servers, but if the form is not working you may need to configure your web server differently. 
+-->
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -354,6 +440,7 @@
                 </div>
             </div>
         </div>
+
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
@@ -378,7 +465,7 @@
                         <div class="modal-body">
                             <h2>Twitter Friends Android App</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
                             <p1 class="project">● Designed and developed an Android Mobile Application about Twitter friends information
                                 <br> ● Utilized AsyncTask to retrieve JSON from server, custom Adapter to display list which can be clicked to show details, mark and classify
                                 <br> ● Built a Twitter RESTful API on the server using Node.js, Express and stored data in MongoDB
@@ -413,9 +500,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Android Concise Music Player</h2>
+                            <h2><a href="https://github.com/Hankyyh/AndroidMusicPlayer" target="_blank">Android Concise Music Player</a></h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <img src="img/music.png" class="img-responsive img-centered" alt="">
                             <p1 class="project"> ● Developed a Music Player on Android with different play modes
                                 <br> ● Retrieved music from local database, stored in list and displayed information in a user-friendly interface
                                 <br> ● Implemented background playing and calls listener based on Service
@@ -429,6 +516,11 @@
                                 <li>Field:
                                     <strong>Android Development
                                     </strong>
+                                </li>
+                                <li>Link:
+                                   <a href="https://github.com/Hankyyh/AndroidMusicPlayer" target="_blank"><strong>Github
+                                    </strong></a>
+                                    
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -450,9 +542,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Responsive Congress Website </h2>
+                            <h2><a href="http://cs-server.usc.edu:33510/conginfo.html" target="_blank">Responsive Congress Website</a></h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <img src="img/coninfo.png" class="img-responsive img-centered" alt="">
                             <p1 class="project">● Created a responsive congress information website utilizing Bootstrap which can display and mark favorite items in a beautiful interface
                                 <br> ● Retrieved request from PHP back-end file on AWS server with AJAX
                                 <br> ● Applied Sunlight Congress API to retrieve JSON data from congress database
@@ -467,6 +559,11 @@
                                 <li>Field:
                                     <strong>BackEnd, FrontEnd
                                     </strong>
+                                </li>
+                                <li>Link:
+                                   <a href="http://cs-server.usc.edu:33510/conginfo.html" target="_blank"><strong>Demo
+                                    </strong></a>
+                                    
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -490,7 +587,7 @@
                         <div class="modal-body">
                             <h2>Collaborative filtering Recommendation System Research</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+                            <img src="img/recommendation.png" class="img-responsive img-centered" alt="">
                             <p1 class="project">● Proposed an adjusted algorithm based on common-feature to improve the accuracy of recommendation (e.g. one of the evaluation metrics, RMSE，is increased by 15% compared with the PCC classic algorithm)
                                 <br> ● Utilized Java to simulate and evaluate different algorithms (e.g. PCC, CV) in collaborative filtering for dataset in MovieLens
                             </p1>
@@ -504,6 +601,11 @@
                                     <strong>Machine Learning
                                     </strong>
                                 </li>
+                                <li>Link:
+                                   <a href="https://github.com/Hankyyh/web_crawler" target="_blank"><strong>Github
+                                    </strong></a>
+                                    
+                                </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -512,7 +614,7 @@
             </div>
         </div>
     </div>
-    <!--
+    
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -525,22 +627,26 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2><a href="https://github.com/Hankyyh/web_crawler" target="_blank">Web Crawler Application</a></h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <img src="img/crawler.png" class="img-responsive img-centered" alt="">
+                            <p1 class="project">● Created web crawler with Scrapy to scrape data from StackOverflow
+                                <br> ● Used MongoDB to store the received data 
+                            </p1>
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
+
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    <strong>Jan 2017
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Field:
+                                    <strong>Web Technology
                                     </strong>
+                                </li>
+                                <li>Link:
+                                   <a href="https://github.com/Hankyyh/web_crawler" target="_blank"><strong>Github
+                                    </strong></a>
+                                    
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -548,6 +654,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
@@ -561,33 +668,41 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
+                        <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2><a href="https://github.com/Hankyyh/MagazineDataWeb" target="_blank">Magazine Information Website</a></h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <img src="img/magazine.png" class="img-responsive img-centered" alt="">
+                            <p1 class="project">● Built a magazine information website with php CodeIgniter framework
+                                <br> ● Implemented data operation about magazine with a virtual interface based on Bootstrap 
+                            </p1>
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
+
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    <strong>Feb 2017
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Field:
+                                    <strong>Back End
                                     </strong>
+                                </li>
+                                <li>Link:
+                                   <a href="https://github.com/Hankyyh/MagazineDataWeb" target="_blank"><strong>Github
+                                    </strong></a>
+                                    
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
--->
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -604,6 +719,12 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
+
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/demo-1.js"></script>
 
 </body>
 
